@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  BNSLogin : 'https://ecommercebackend-node-mysql.herokuapp.com'
+
 };

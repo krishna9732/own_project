@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="form-bg">
+            <form [formGroup]="create" class="text-center border border-light p-5" (ngSubmit)="PostData(create)">
+                <p class="h4 mb-4">Sign up</p>
+                <div class="form-group">
+                <input type="text" formControlName="fname"  class="form-control mb-4" placeholder="Your First Name">
+                <div class="alert alert-danger" *ngIf="create.controls.fname.touched && !create.controls.fname.valid">
+                    Firstname required
+                </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="lname"  class="form-control mb-4" placeholder="Youre Last name">
+                    <div class="alert alert-danger" *ngIf="create.controls.lname.touched && !create.controls.lname.valid">
+                        Last name required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="email"  class="form-control mb-4" placeholder="Enter Email id">
+                    <div class="alert alert-danger" *ngIf="create.controls.email.touched && !create.controls.email.valid">
+                        Emailid required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="password"  class="form-control mb-4" placeholder="Password">
+                    <div class="alert alert-danger" *ngIf="create.controls.password.touched && !create.controls.password.valid">
+                        password required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="phone_number"  class="form-control mb-4" placeholder="phone number">
+                    <div class="alert alert-danger" *ngIf="create.controls.phone_number.touched && !create.controls.phone_number.valid">
+                        phone number required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button mdbBtn color="info" block="true" class="my-4" [disabled]='!create.valid' type="submit">Sign up</button>
+                    <p>for back?
+                        <a style=" color: blue;" (click) = 'cancel()'>cancel</a>
+                    </p>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

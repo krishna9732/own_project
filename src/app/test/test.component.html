@@ -1,0 +1,52 @@
+<div class="container">
+    <h1 >
+        {{title}}
+    </h1>
+    <div>
+        <form #userForm="" (ngSubmit)="onFormSubmit(userForm)">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input name="uname"  required ngModel>
+                        <div *ngIf="" >
+                            name required
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" value="male" name="gender"  required ngModel>Male
+                        <input type="radio" value="female" name="gender" required ngModel>Female
+                        <div *ngIf="">
+                            Gender required
+                        </div>
+                    </td>
+                </tr>
+                <tr> 
+                    <td>Are you married</td>
+                    <td>
+                        <input type="checkbox" name="married" >
+                    </td>
+                </tr>
+                <tr> 
+                    <td>Accepted</td>
+                    <td>
+                        <input type="checkbox" name="tc"  readonly #tc ="">
+                        <div *ngIf="">
+                            Accpect T & C
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button>Submit</button>
+                        <button type="button" (click)="setDefaultValues()">Set Default</button>
+                        <button type="button" (click)="resetForm(userForm)">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
